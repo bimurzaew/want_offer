@@ -1,4 +1,6 @@
 .header {
+    width: 1136px;
+    margin: auto;
     display: flex;
     padding:10px;
 }

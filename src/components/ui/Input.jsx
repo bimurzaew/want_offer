@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import styles from "./ui.module.css";
 
 function Input({ text }) {
-  return <input placeholder={text} type="text" className="input" />;
+  return <input placeholder={text} type="text" className={styles.input} />;
 }
 
 export default Input;

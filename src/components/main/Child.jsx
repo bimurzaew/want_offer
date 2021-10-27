@@ -1,18 +1,19 @@
 import React from "react";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
+import styles from "./main.module.css";
 
 function Child(props) {
   return (
-    <div className="main">
-      <div className="add">
+    <div className={styles.main}>
+      <div className={styles.add}>
         <p>Дети(макс.5)</p>
-        <Button type="add" text="+ Добавить ребенка" />
+        <Button type="btn-add" text="+ Добавить ребенка" />
       </div>
-      <div className="child-info">
-        <Input text='Имя'/>
-        <Input text='Возраст'/>
-        <Button type="delete" text="Удалить" />
+      <div className={styles.childInfo}>
+        <Input text="Имя" />
+        <Input text="Возраст" />
+        <Button type="btn-delete" text="Удалить" />
       </div>
     </div>
   );

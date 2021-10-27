@@ -1,6 +1,5 @@
 import React from "react";
 import Input from "../ui/Input";
-import "./style.css";
 
 function Personal(props) {
   return (
