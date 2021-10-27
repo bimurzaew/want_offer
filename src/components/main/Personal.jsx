@@ -7,8 +7,8 @@ function Personal(props) {
     <div className="personal">
       <div className="inp">
         <p>Персональные данные</p>
-        <Input />
-        <Input />
+        <Input text="Имя" />
+        <Input text="Возраст" />
       </div>
     </div>
   );

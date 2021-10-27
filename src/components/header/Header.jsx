@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./Logo_imi_horizontal.png";
+import logo from "./Logo_imi_horizontal.svg";
 import "./style.css";
 
 function Header(props) {
