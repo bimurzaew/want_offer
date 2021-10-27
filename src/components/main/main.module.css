@@ -4,16 +4,16 @@
 }
 p {
     font-size: 17px;
+    font-weight: bold;
 }
 
 .add {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin:40px 0 15px;
 }
 
 .childInfo {
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }

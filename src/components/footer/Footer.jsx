@@ -1,10 +1,12 @@
 import React from "react";
-import "./style.css";
+import styles from "./footer.module.css";
 
 function Footer(props) {
-  return <div className="footer">
-    <p className='footer-text'>all right reserved</p>
-  </div>;
+  return (
+    <div className={styles.footer}>
+      <p className={styles.footerText}>all right reserved</p>
+    </div>
+  );
 }
 
 export default Footer;
