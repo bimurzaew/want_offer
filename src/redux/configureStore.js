@@ -1,5 +1,5 @@
 import { people } from "./features/people";
+import {createStore} from "redux";
 
-const { createStore } = require("redux");
 
 export const store = createStore(people);
