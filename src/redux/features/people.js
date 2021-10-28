@@ -1,26 +1,26 @@
 const initialState = {
-  users: [
-    {
-      id: 1,
-      name: "Vasya",
-      lastName: "Vasin",
-      age: "20",
-      children: [
-        {
-          name: "Bil",
-          age: "12",
-        },
-        {
-          name: "Bil",
-          age: "12",
-        },
-      ],
-    },
-  ],
+  users: [],
+  children: [],
 };
 
 export const people = (state = initialState, action) => {
   switch (action.type) {
+    case "person/add":
+      return {
+        ...state,
+        users: [
+          ...state.users,
+          {
+            name: action.payload.name,
+            age: action.payload.age,
+          },
+        ],
+      };
+    case "children/add":
+      return {
+        ...state,
+        children: [...state.children, ...action.payload],
+      };
     default:
       return state;
   }
