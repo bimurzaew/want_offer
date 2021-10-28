@@ -51,8 +51,16 @@ function Main(props) {
       <div className="personal">
         <div className="inp">
           <p>Персональные данные</p>
-          <Input placeholder="Имя" onChange={handleChangeName} />
-          <Input placeholder="Возраст" onChange={handleChangeAge} />
+          <Input
+              placeholder="Имя"
+              type="text"
+              onChange={handleChangeName}
+          />
+          <Input
+            placeholder="Возраст"
+            type="number"
+            onChange={handleChangeAge}
+          />
         </div>
       </div>
       <div className={styles.main}>
@@ -70,6 +78,7 @@ function Main(props) {
           return (
             <div key={index} className={styles.childInfo}>
               <Input
+                type="text"
                 name="name"
                 placeholder="Имя"
                 value={child.name}
@@ -77,6 +86,7 @@ function Main(props) {
               />
               <Input
                 name="age"
+                type="number"
                 placeholder="Возраст"
                 value={child.age}
                 onChange={(e) => handleChangeChild(e, index)}
@@ -88,11 +98,7 @@ function Main(props) {
           );
         })}
       </div>
-      <Button
-          type="save"
-          onClick={handleSave}
-          disabled={!name || !age}
-      >
+      <Button type="save" onClick={handleSave} disabled={!name || !age}>
         Сохранить
       </Button>
     </div>
