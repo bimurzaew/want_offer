@@ -1,56 +1,56 @@
 .btn {
-    line-height: 30px;
-    font-size: 16px;
-    cursor: pointer;
+  line-height: 30px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .btn-add {
-    background-color: white;
-    color: #01a7fd;
-    border-radius: 40px;
-    border: 2px solid #01a7fd;
-    width: 205px;
-    height: 45px;
-    position: relative;
-    padding-left: 30px;
+  background-color: white;
+  color: #01a7fd;
+  border-radius: 40px;
+  border: 2px solid #01a7fd;
+  width: 205px;
+  height: 45px;
+  position: relative;
+  padding-left: 30px;
 }
 .btn-add:before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 2px;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    background-color: #01a7fd;
-    border-radius: 2px;
-    transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  background-color: #01a7fd;
+  border-radius: 2px;
+  transform: translateY(-50%);
 }
 .btn-add:after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 16px;
-    position: absolute;
-    left: 27px;
-    top: 50%;
-    background-color: #01a7fd;
-    border-radius: 2px;
-    transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 2px;
+  height: 16px;
+  position: absolute;
+  left: 27px;
+  top: 50%;
+  background-color: #01a7fd;
+  border-radius: 2px;
+  transform: translateY(-50%);
 }
 .btn-save {
-    background-color: #01a7fd;
-    border-radius: 50px;
-    border: solid #01a7fd;
-    color: white;
-    width: 120px;
-    height: 40px;
+  background-color: #01a7fd;
+  border-radius: 50px;
+  border: solid #01a7fd;
+  color: white;
+  width: 120px;
+  height: 40px;
 }
 .btn-delete {
-    background-color: white;
-    color: #01a7fd;
-    border: none;
+  background-color: white;
+  color: #01a7fd;
+  border: none;
 }
 .btn[disabled] {
-    opacity: 0.5;
-    cursor: default;
+  opacity: 0.5;
+  cursor: default;
 }

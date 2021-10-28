@@ -12,7 +12,7 @@ function Button({ type, children, ...props }) {
 Button.propTypes = {
   type: propTypes.string.isRequired,
   children: propTypes.string.isRequired,
-  props: propTypes.object.isRequired,
+  props: propTypes.object,
 };
 
 export default Button;
