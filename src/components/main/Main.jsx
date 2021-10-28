@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import Button from "../ui/Button";
+import React, { useCallback, useState } from "react";
+import Button from "../ui/button/Button";
 import styles from "./main.module.css";
-import Input from "../ui/Input";
+import Input from "../ui/input/Input";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { addPerson } from "../../redux/features/people";
 
-function Main(props) {
+function Main() {
   const [name, setName] = useState();
   const [age, setAge] = useState();
   const [children, setChildren] = useState([]);
@@ -19,19 +20,22 @@ function Main(props) {
     setAge(e.target.value);
   };
 
-  const handleChangeChild = (e, index) => {
-    setChildren(
-      children.map((child, idx) => {
-        if (index === idx) {
-          return {
-            ...child,
-            [e.target.name]: e.target.value,
-          };
-        }
-        return child;
-      })
-    );
-  };
+  const handleChangeChild = useCallback(
+    (e, index) => {
+      setChildren(
+        children.map((child, idx) => {
+          if (index === idx) {
+            return {
+              ...child,
+              [e.target.name]: e.target.value,
+            };
+          }
+          return child;
+        })
+      );
+    },
+    [children]
+  );
 
   const handleAddChild = () => {
     setChildren([...children, { name: "", age: "" }]);
@@ -42,8 +46,7 @@ function Main(props) {
   };
 
   const handleSave = () => {
-    dispatch({ type: "children/add", payload: children });
-    dispatch({ type: "person/add", payload: { name, age } });
+    dispatch(addPerson({ children, age, name }));
     history.push("/preview");
   };
   return (
@@ -51,11 +54,7 @@ function Main(props) {
       <div className="personal">
         <div className="inp">
           <p>Персональные данные</p>
-          <Input
-              placeholder="Имя"
-              type="text"
-              onChange={handleChangeName}
-          />
+          <Input placeholder="Имя" type="text" onChange={handleChangeName} />
           <Input
             placeholder="Возраст"
             type="number"

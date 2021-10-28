@@ -15,13 +15,13 @@ export const people = (state = initialState, action) => {
             age: action.payload.age,
           },
         ],
-      };
-    case "children/add":
-      return {
-        ...state,
-        children: [...state.children, ...action.payload],
+        children: [...state.children, ...action.payload.children],
       };
     default:
       return state;
   }
+};
+
+export const addPerson = ({ children, age, name }) => {
+  return { type: "person/add", payload: { children, age, name } };
 };
