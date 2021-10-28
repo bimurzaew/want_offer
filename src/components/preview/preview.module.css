@@ -1,14 +1,14 @@
 .preview {
-    width: 616px;
-    margin: auto;
+  width: 616px;
+  margin: auto;
 }
 .child-data {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 .child {
-    background: #ececec;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: fit-content;
-    padding: 15px;
+  background: #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 15px;
 }

@@ -5,7 +5,7 @@
   border: 1px solid #ececec;
   border-radius: 5px;
   margin-right: 18px;
-  padding: 10px 15px 5px ;
+  padding: 10px 15px 5px;
 }
 .btn {
   line-height: 30px;
@@ -33,7 +33,6 @@
   background-color: #01a7fd;
   border-radius: 2px;
   transform: translateY(-50%);
-
 }
 .btn-add:after {
   content: "";
