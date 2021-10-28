@@ -17,7 +17,7 @@ function Preview() {
             return (
               <div key={index}>
                 <div className={styles.desc}>Имя: {item.name}</div>
-                <div >Возраст: {item.age}</div>
+                <div>Возраст: {item.age}</div>
               </div>
             );
           })}
