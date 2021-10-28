@@ -5,9 +5,7 @@ function ChildData(props) {
   return (
     <div className={styles.childData}>
       <p>Дети</p>
-        <div className={styles.child}>
-            vasdas
-        </div>
+      <div className={styles.child}>vasdas</div>
     </div>
   );
 }

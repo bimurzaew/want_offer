@@ -16,27 +16,27 @@ function Main(props) {
       <div className="personal">
         <div className="inp">
           <p>Персональные данные</p>
-          <Input f={handleChangeName} text="Имя" />
-          <Input text="Возраст" />
+          <Input onChange={handleChangeName} placeholder="Имя" />
+          <Input placeholder="Возраст" />
         </div>
       </div>
       <div className={styles.main}>
         <div className={styles.add}>
           <p>Дети(макс.5)</p>
-          <Button type="add" text={"Добавить ребенка"} />
+          <Button type="add">Добавить ребенка </Button>
         </div>
         <div className={styles.childInfo}>
-          <Input text="Имя" />
-          <Input text="Возраст" />
-          <Button type="delete" text="Удалить" />
+          <Input placeholder="Имя" />
+          <Input placeholder="Возраст" />
+          <Button type="delete">Удалить</Button>
         </div>
         <div className={styles.childInfo}>
-          <Input text="Имя" />
-          <Input text="Возраст" />
-          <Button type="delete" text="Удалить" />
+          <Input placeholder="Имя" />
+          <Input placeholder="Возраст" />
+          <Button type="delete">Удалить</Button>
         </div>
       </div>
-      <Button type="save" text="Сохранить" />
+      <Button type="save">Сохранить</Button>
     </div>
   );
 }
