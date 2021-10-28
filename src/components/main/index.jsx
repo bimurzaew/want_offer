@@ -64,7 +64,7 @@ function Main() {
       </div>
       <div className={styles.main}>
         <div className={styles.add}>
-          <p>Дети:</p>
+          <p>Дети</p>
           <Button
             type="add"
             onClick={handleAddChild}
@@ -97,7 +97,7 @@ function Main() {
           );
         })}
       </div>
-      <Button type="save" onClick={handleSave} disabled={!name || !age}>
+      <Button type="save" onClick={handleSave} disabled={!name && !age}>
         Сохранить
       </Button>
     </div>
