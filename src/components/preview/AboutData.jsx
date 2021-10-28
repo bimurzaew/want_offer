@@ -8,9 +8,10 @@ function AboutData(props) {
       <p>Персональные данные</p>
       {person.map((item, index) => {
         return (
-          <h4 key={index}>
-            {item.name} {item.lastName} {item.age}
-          </h4>
+          <div>
+            <div>Имя: {item.name}</div>
+            <div>Возраст: {item.age}</div>
+          </div>
         );
       })}
     </>

@@ -65,7 +65,7 @@ function Main(props) {
       </div>
       <div className={styles.main}>
         <div className={styles.add}>
-          <p>Дети(макс.5)</p>
+          <p>Дети:</p>
           <Button
             type="add"
             onClick={handleAddChild}
