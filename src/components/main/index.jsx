@@ -1,10 +1,10 @@
 import React, { useCallback, useState } from "react";
-import Button from "../ui/button/Button";
 import styles from "./main.module.css";
-import Input from "../ui/input/Input";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { addPerson } from "../../redux/features/people";
+import Input from "../ui/input";
+import Button from "../ui/button";
 
 function Main() {
   const [name, setName] = useState();
