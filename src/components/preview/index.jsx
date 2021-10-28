@@ -8,26 +8,38 @@ function Preview() {
 
   return (
     <div className={styles.preview}>
-      <p>Персональные данные</p>
-      {person.map((item, index) => {
-        return (
-          <div key={index}>
-            <div>Имя: {item.name}</div>
-            <div>Возраст: {item.age}</div>
+      {person.length === 0 ? (
+        <h2 className={styles.info}>Нет добавленных пользователей</h2>
+      ) : (
+        <>
+          <p>Персональные данные</p>
+          {person.map((item, index) => {
+            return (
+              <div key={index}>
+                <div className={styles.desc}>Имя: {item.name}</div>
+                <div >Возраст: {item.age}</div>
+              </div>
+            );
+          })}
+          <div className={styles.childData}>
+            <p>Дети:</p>
+            {children.length === 0 ? (
+              <h3>бездетный человек</h3>
+            ) : (
+              <>
+                {children.map((child, index) => {
+                  return (
+                    <div key={index} className={styles.child}>
+                      <div className={styles.desc}>Имя: {child.name}</div>
+                      <div>Возраст: {child.age}</div>
+                    </div>
+                  );
+                })}
+              </>
+            )}
           </div>
-        );
-      })}
-      <div className={styles.childData}>
-        <p>Дети:</p>
-        {children.map((child, index) => {
-          return (
-            <div key={index} className={styles.child}>
-              <div>Имя: {child.name}</div>
-              <div>Возраст: {child.age}</div>
-            </div>
-          );
-        })}
-      </div>
+        </>
+      )}
     </div>
   );
 }
