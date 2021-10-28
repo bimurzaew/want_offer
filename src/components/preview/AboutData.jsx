@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ChildData from "./ChildData";
 
 function AboutData(props) {
-  const person = useSelector((state) => state.people.users);
+  const person = useSelector((state) => state.users);
   return (
     <>
       <p>Персональные данные</p>
