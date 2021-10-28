@@ -3,9 +3,9 @@ ___
 
 ## Запуск проекта
 ### Для запуска проекта нужно выполнить следующие шаги:
-git clone https://github.com/bimurzaew/want_offer
+1. git clone https://github.com/bimurzaew/want_offer
 
-npm install
+2. npm install
 
-npm start 
+3. npm start 
 ___
