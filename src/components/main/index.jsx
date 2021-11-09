@@ -7,12 +7,11 @@ import Input from "../ui/input";
 import Button from "../ui/button";
 
 function Main() {
-  const [name, setName] = useState();
-  const [age, setAge] = useState();
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
   const [children, setChildren] = useState([]);
   const dispatch = useDispatch();
   const history = useHistory();
-
   const handleChangeName = (e) => {
     setName(e.target.value);
   };
@@ -49,13 +48,20 @@ function Main() {
     dispatch(addPerson({ children, age, name }));
     history.push("/preview");
   };
+
   return (
     <div className={styles.main}>
       <div className="personal">
         <div className="inp">
           <p>Персональные данные</p>
-          <Input placeholder="Имя" type="text" onChange={handleChangeName} />
           <Input
+            value={name}
+            placeholder="Имя"
+            type="text"
+            onChange={handleChangeName}
+          />
+          <Input
+            value={age}
             placeholder="Возраст"
             type="number"
             onChange={handleChangeAge}
